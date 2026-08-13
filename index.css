@@ -1,0 +1,87 @@
+/* || Global Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Typography */
+  --off-white: #fffffb;
+  --dark-grey: #463d3d;
+  --olive-green: #7f8a6a;
+  --nav-header-fs: 1.4rem;
+  --nav-header-fw: 500;
+  --nav-header-ls: 0.2rem;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/cormorant-garamond-v21-latin-regular.woff2')
+    format('woff2');
+  font-family: 'Cormorant Garamond';
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/cormorant-garamond-v21-latin-700.woff2') format('woff2');
+  font-family: 'Cormorant Garamond';
+  font-display: swap;
+}
+
+/* || Main Styles */
+
+/* Hero Section */
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+
+  h1,
+  blockquote,
+  cite {
+    color: var(--dark-grey);
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.15rem;
+  }
+
+  blockquote {
+    width: 35ch;
+    line-height: 150%;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  cite {
+    width: 20ch;
+  }
+}
+
+/* || Media Queries */
+
+@media screen and (min-width: 51.25rem) {
+  .menu-icon-container {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .content-container {
+    margin-inline: auto;
+    width: min(100% - 4rem, 90rem);
+  }
+}
