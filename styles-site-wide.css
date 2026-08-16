@@ -27,6 +27,10 @@ body {
   background-color: var(--off-white);
 }
 
+.content-container {
+  position: relative;
+}
+
 /* Header */
 
 header {
@@ -57,11 +61,62 @@ header {
 }
 
 .menu-icon-container {
+  z-index: 999;
+  transition: background-image 0.2 ease-in-out;
+  cursor: pointer;
   background-image: url(./assets/bars-solid-full.svg);
   background-position: center;
   background-repeat: none;
   width: 2rem;
   height: 2.1rem;
+}
+
+.close {
+  background-image: url(./assets/xmark-solid-full.svg);
+}
+
+/* Mobile Menu */
+
+.mobile-menu-container {
+  position: absolute;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  width: 100%;
+  pointer-events: none;
+}
+
+.mobile-menu-show {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--off-white);
+  padding-top: 8rem;
+  height: 100vh;
+
+  a {
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--dark-grey);
+    font-weight: var(--nav-header-fw);
+    font-size: var(--nav-header-fs);
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: var(--nav-header-ls);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--olive-green);
+  }
 }
 
 /* || Media Queries */
