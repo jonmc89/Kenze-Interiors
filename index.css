@@ -65,6 +65,11 @@
   cite {
     width: 20ch;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* || Media Queries */
