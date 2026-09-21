@@ -11,6 +11,7 @@
   --off-white: #fffffb;
   --dark-grey: #463d3d;
   --olive-green: #7f8a6a;
+  --biege: #e8e1da;
   --nav-header-fs: 1.4rem;
   --nav-header-fw: 500;
   --nav-header-ls: 0.2rem;
@@ -69,6 +70,61 @@
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+/* Our Approach Section */
+
+.our-approach-section {
+  background-color: var(--biege);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.our-approach-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block-end: 1.5rem;
+  padding: 2rem 1.5rem;
+
+  h2,
+  p {
+    color: var(--dark-grey);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+  }
+
+  p {
+    margin-block-end: 1rem;
+    line-height: 150%;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+
+    span {
+      transition:
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+      border: 0.1rem solid var(--dark-grey);
+      padding: 1rem 2rem;
+      color: var(--dark-grey);
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    span:hover {
+      background-color: #463d3d;
+      color: var(--off-white);
+    }
   }
 }
 
